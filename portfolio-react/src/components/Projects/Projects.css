@@ -1,0 +1,108 @@
+.projects__intro {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-faint);
+  margin-bottom: 40px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px 26px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-signal);
+  box-shadow: var(--shadow-glow);
+}
+
+.project-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.project-card__number {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-faint);
+}
+
+.project-card__arrow {
+  font-size: 1.2rem;
+  color: var(--text-faint);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover .project-card__arrow {
+  color: var(--accent-signal);
+  transform: translate(3px, -3px);
+}
+
+.project-card__title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.project-card__description {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-card__tags span {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--accent-signal);
+  background: rgba(46, 230, 166, 0.08);
+  border: 1px solid rgba(46, 230, 166, 0.25);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.projects__all-link {
+  display: inline-block;
+  margin-top: 34px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--accent-link);
+}
+
+.projects__all-link:hover {
+  color: var(--accent-signal);
+}
+
+@media (max-width: 960px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,139 @@
+/* ============================================
+   Gopisri M — Portfolio Design Tokens
+   Theme: cybersecurity / terminal-inspired dark UI
+   ============================================ */
+:root {
+  /* Color palette */
+  --bg-void: #0a0e17; /* page background */
+  --bg-panel: #121826; /* card / section surface */
+  --bg-panel-alt: #161f30; /* hover surface */
+  --border-subtle: rgba(148, 163, 184, 0.14);
+
+  --accent-signal: #2ee6a6; /* terminal green — primary accent */
+  --accent-signal-dim: #1fae7f;
+  --accent-link: #5b8def; /* electric blue — secondary accent */
+  --accent-alert: #ffb020; /* amber — used sparingly for badges */
+
+  --text-primary: #e6edf3;
+  --text-muted: #8b96a5;
+  --text-faint: #5b6577;
+
+  /* Typography */
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Shape & shadow */
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+  --shadow-card: 0 20px 45px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 0 1px rgba(46, 230, 166, 0.35), 0 18px 40px rgba(46, 230, 166, 0.12);
+
+  --container-width: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg-void);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--text-primary);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font-family: var(--font-body);
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-signal);
+  margin-bottom: 14px;
+}
+
+.section-label::before {
+  content: "$";
+  color: var(--text-faint);
+}
+
+.section-heading {
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 70px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

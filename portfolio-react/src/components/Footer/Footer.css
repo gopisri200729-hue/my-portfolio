@@ -1,0 +1,25 @@
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 32px 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-faint);
+}
+
+.footer__signature span {
+  color: var(--accent-signal);
+}
+
+@media (max-width: 560px) {
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
